@@ -1,0 +1,86 @@
+Fake News Prediction
+
+TF-IDf Vectorizor :
+			TF-IDF (Term Frequency–Inverse Document Frequency) converts text documents into numerical feature vectors.
+It highlights words that are frequent in a given document but not frequent across all documents
+
+Doc1: "the sky is blue"
+Doc2: "the sun is bright"
+Doc3: "the sun in the sky is bright"
+
+(a) Tokenization
+
+Doc1 → [the, sky, is, blue]
+
+Doc2 → [the, sun, is, bright]
+
+Doc3 → [the, sun, in, the, sky, is, bright]
+
+(b) Vocabulary (unique terms)
+[the, sky, is, blue, sun, bright, in]
+
+c) Term Frequency (TF)
+
+TF = (Count of term in document) / (Total terms in document)
+
+Term	Doc1 (4 words)	Doc2 (4 words)	Doc3 (7 words)
+the	1/4=0.25	1/4=0.25	2/7≈0.2857
+sky	1/4=0.25	0		1/7≈0.1429
+is	1/4=0.25	1/4=0.25	1/7≈0.1429
+blue	1/4=0.25	0		0
+sun	0		1/4=0.25	1/7≈0.1429
+bright	0		1/4=0.25	1/7≈0.1429
+in	0		0		1/7≈0.1429
+
+
+(d) Inverse Document Frequency (IDF)
+
+IDF = log( N / (1 + df) )
+(N = total docs = 3, df = number of docs containing the term)
+
+Term	df	IDF
+the	3	log(3/4)= -0.125 (≈0 if floored)
+sky	2	log(3/3)=0
+is	3	log(3/4)= -0.125 (≈0 if floored)
+blue	1	log(3/2)=0.405
+sun	2	log(3/3)=0
+bright	2	log(3/3)=0
+in	1	log(3/2)=0.405
+
+(Most libraries use log((1+N)/(1+df)) + 1 to keep positives.)
+
+
+
+(e) Compute TF-IDF = TF × IDF
+
+Example:
+
+For Doc1, “blue”: TF=0.25 × IDF=0.405 = 0.10125
+
+For Doc1, “sky”: TF=0.25 × IDF=0 = 0
+
+Compute this for all terms in all docs.
+
+
+
+(f) Build the TF-IDF Vectors
+
+Vector order = [the, sky, is, blue, sun, bright, in]
+
+Doc1: [0, 0, 0, 0.101, 0, 0, 0]
+
+Doc2: [0, 0, 0, 0, 0, 0, 0.101] (numbers depend on formula used)
+
+Doc3: [values per term]
+
+This matrix is the input for machine learning models.
+
+
+
+
+Stage		What Happens					Example
+Tokenization	Break text into words			“the sky is blue” → [the, sky, is, blue]
+Vocabulary	Unique terms from all docs			[the, sky, is, blue, sun, bright, in]
+TF		Term frequency per doc			sky: 1/4=0.25
+IDF		Penalize common words			IDF(blue)=0.405
+TF×IDF		Multiply TF×IDF				blue=0.25×0.405=0.101
