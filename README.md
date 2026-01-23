@@ -14,7 +14,6 @@ The case studies are categorized by the type of learning and industry applicatio
 | **Healthcare Diagnostics** | Classification | Diabetes and Breast Cancer prediction using Scikit-Learn. |
 | **Financial Analytics** | Regression | Predicting house prices and market trends with Linear/Polynomial models. |
 | **Social Media Analysis** | Clustering | User behavior segmentation and pattern recognition. |
-| **Computer Vision** | Deep Learning | Image classification and digit recognition using TensorFlow/Keras. |
 | **Natural Language Processing** | Text Analytics | Sentiment analysis and spam detection. |
 
 ---
@@ -24,7 +23,6 @@ The case studies are categorized by the type of learning and industry applicatio
 - **Data Manipulation:** NumPy, Pandas
 - **Visualization:** Matplotlib, Seaborn
 - **Machine Learning:** Scikit-Learn
-- **Deep Learning:** TensorFlow, Keras
 - **Environment:** Jupyter Notebooks, Google Colab
 
 ---
@@ -40,11 +38,14 @@ Every case study in this repository follows a rigorous analytical framework:
 
 ---
 
-## 📈 Installation & Setup
+## 📈 Installation & Setup Guide
 
-1. **Clone the Portfolio:**
-   ```bash
-   git clone [https://github.com/Bhavesh112004/Case-Studies.git](https://github.com/Bhavesh112004/Case-Studies.git)
+To run these projects locally, follow these steps to ensure all dependencies are correctly configured.
+
+### 1. Clone the Portfolio
+```bash
+git clone [https://github.com/Bhavesh112004/Case-Studies.git](https://github.com/Bhavesh112004/Case-Studies.git)
+cd Case-Studies
 
 2. Install Dependencies
 
