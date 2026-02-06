@@ -1,7 +1,7 @@
 # 📊 Machine Learning Case Studies
 ### Data-Driven Insights and Predictive Modeling Portfolio
 
-This repository is a curated collection of over 20+ Machine Learning case studies. It demonstrates my end-to-end expertise in the data science lifecycle, from Exploratory Data Analysis (EDA) and feature engineering to model deployment and evaluation.
+This repository is a curated collection of over 10+ Machine Learning case studies. It demonstrates my end-to-end expertise in the data science lifecycle, from Exploratory Data Analysis (EDA) and feature engineering to model deployment and evaluation.
 
 ---
 
